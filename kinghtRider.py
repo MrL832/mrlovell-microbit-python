@@ -3,7 +3,6 @@
 # on the micro:bit's display, moving back and forth across the middle row.
 
 from microbit import *
-# music module is no longer needed as per request
 
 # Function to perform one sweep of the Knight Rider LED scan
 # The 'brightness' parameter controls how bright the LED is (0-9)
