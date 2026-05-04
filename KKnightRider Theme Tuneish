@@ -1,0 +1,47 @@
+# Knight Rider Theme Tuneish + scan
+# Vibe coded together with gemini 1.5 Flash
+# Chris lovell 4th May 2026
+
+
+from microbit import *
+import music
+
+# 1. Hardware Initialization
+speaker.on()
+set_volume(255)
+
+# 2. Music Data
+bass_a = ['A3:1', 'R:1', 'A3:1', 'A3:1']
+bass_bb = ['Bb3:1', 'R:1', 'Bb3:1', 'Bb3:1']
+melody = ['A5:4', 'E5:4', 'A5:4', 'F5:4', 'E5:2', 'D5:2', 'C5:2', 'B4:2', 'A4:8']
+
+# 30-Second Sequence
+knight_rider_30s = (bass_a * 8 + bass_bb * 8) + melody + (bass_a * 4) + melody
+
+# 3. Simple Coordinate Scanner
+x = 0
+direction = 1
+
+music.set_tempo(bpm=120, ticks=4)
+
+# Show 'A' so you know to click and start the music
+display.show('A')
+
+while True:
+    if button_a.is_pressed():
+        music.stop()
+        music.play(knight_rider_30s, wait=False)
+    
+    # SIMPLE SCANNER: Clear, Set One Pixel, Move
+    display.clear()
+    display.set_pixel(x, 2, 9) # Middle row, brightness 9
+    
+    # Update position
+    x += direction
+    
+    # Flip direction at edges
+    if x == 4 or x == 0:
+        direction *= -1
+    
+    # Speed of the light
+    sleep(100)
