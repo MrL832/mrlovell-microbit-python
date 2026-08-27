@@ -1,3 +1,6 @@
+
+# Code repo created for Hello World "Using the micro:bit for teaching GCSE Computer Science" by Chris Lovell and available in January 2027
+
 from microbit import *
 
 # The secret password: a sequence of A and B presses
