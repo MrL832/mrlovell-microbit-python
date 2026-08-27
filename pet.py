@@ -1,6 +1,6 @@
 # Code taken directly from microbit.org teacher demo code on 27th August 2028.
 # Find micro:bit pet and original code here -> https://microbit.org/projects/make-it-code-it/microbit-pet/
-# Code repo created for Hello World "Using the micro:bit for teaching GCSE Computer Science by Chris Lovell and available in January 2017
+# Code repo created for Hello World "Using the micro:bit for teaching GCSE Computer Science by Chris Lovell and available in January 2027
 
 
 
